@@ -9,9 +9,12 @@ import os
 startTime = int(time.time())
 client_id = 714537755425898596
 RPC = Presence(client_id)
-RPC.connect()
-RPC.update(large_image="ico", large_text='JP char training', details='Training his japanese skill', state="Score : 0/0 (100%)", start = startTime)
 
+try:
+	RPC.connect()
+	RPC.update(large_image="ico", large_text='JP char training', details='Training his japanese skill', state="Score : 0/0 (100%)", start = startTime)
+except:
+	pass
 
 #Window set up
 window = Tk()
